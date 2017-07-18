@@ -20,9 +20,9 @@ if (hasInterface && {playerSide == _side}) then {
 		[{
 			params ["_pos"];
 			_onTP = {
-				[false] call uo_choosePlayArea_fnc_showWeatherPreview;
+				[false] call ga_drop_fnc_showWeatherPreview;
 				openMap [false, false];
-				if (playerSide == WEST) then {}else{};
+				if (playerSide == WEST) then {_onTP = [[-500, -500, 0]] call ;}else{_onTP = [OPFERSPAWN] call ;};
 			};
 			[player,_pos,_onTP] call ga_drop_fnc_teleport;
 		}, [_pos], random 2] call CBA_fnc_waitAndExecute;
