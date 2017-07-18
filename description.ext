@@ -1,0 +1,51 @@
+#define MODULES_DIRECTORY node_modules
+
+#include "node_modules\grad-listBuymenu\grad_listBuymenu.hpp"
+#include "cfgParams.hpp"
+#include "cfgIslands.hpp"
+#include "cfgFactions.hpp"
+#include "cfgCivilians.hpp"
+#include "buyables\cfgBuyables.hpp"
+
+//HEADER =======================================================================
+class Header
+{
+    gameType = Seize;
+    minPlayers = 2;
+    maxPlayers = 84;
+};
+
+//LOAD SCREEN ==================================================================
+onLoadName = "URBAN OPS";
+onLoadMission = "";
+author = "McDiod für Gruppe Adler";
+loadScreen = "data\loadpic.paa";
+
+//MISC =========================================================================
+respawn = 3;
+respawnDelay = 9999;
+respawnVehicleDelay = 0;
+respawnTemplates[] = {"Base"};
+respawnOnStart = -1;
+respawnDialog = 0;
+disabledAI = 1;
+enableDebugConsole = 1;
+allowFunctionsRecompile = 1;
+
+//FUNCTIONS ====================================================================
+class CfgFunctions {
+    #include "functions\cfgFunctions.hpp"
+    #include "node_modules\grad-loadout\cfgFunctions.hpp"
+    #include "node_modules\grad-listbuymenu\cfgFunctions.hpp"
+};
+
+//LOADOUTS =====================================================================
+class Loadouts {
+    resetLoadout = 0;
+    baseDelay = 10;
+    handleRadios = 1;
+
+    class Faction {
+        #include "node_modules\grad-factions-tvt\loadouts.hpp"
+    };
+};
