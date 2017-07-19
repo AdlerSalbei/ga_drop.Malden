@@ -24,12 +24,26 @@ class common {
 	class temp3dMarker {};
 	class wait3dFrames {};
 };
+class init {
+	class loadoutFaction {};
+	class pubVars {};
+	class sequentialInit {};
+	class systems {postInit = 1;};
+};
 class missionstart {
+	class bluforBuyAction {};
 	class createTrigger {};
 	class enableBFT {};
-	class findOpfStartPos {};
-	class findBluStartPos {};
+	class opforBuyAction {};
 	class tpSide {};
+};
+class setup {
+	class briefingDone {postInit = 1;};
+	class moveToMapStart {postInit = 1;};
+	class setMissionParams {};
+	class setOriginalSide {};
+	class setTime {};
+	class setWeather {};
 };
 class spawn {
 	class prepBluforSpawn {};

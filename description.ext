@@ -16,9 +16,9 @@ class Header
 };
 
 //LOAD SCREEN ==================================================================
-onLoadName = "URBAN OPS";
+onLoadName = "DROP";
 onLoadMission = "";
-author = "McDiod für Gruppe Adler";
+author = "Salbei für Gruppe Adler";
 loadScreen = "data\loadpic.paa";
 
 //MISC =========================================================================
@@ -35,13 +35,14 @@ allowFunctionsRecompile = 1;
 //FUNCTIONS ====================================================================
 class CfgFunctions {
     #include "functions\cfgFunctions.hpp"
+	#include "dialogs\cfgFunctions.hpp"
     #include "node_modules\grad-loadout\cfgFunctions.hpp"
     #include "node_modules\grad-listbuymenu\cfgFunctions.hpp"
 };
 
 //LOADOUTS =====================================================================
 class Loadouts {
-    resetLoadout = 0;
+    resetLoadout = 1;
     baseDelay = 10;
     handleRadios = 1;
 

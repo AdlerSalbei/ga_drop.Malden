@@ -20,7 +20,7 @@ class Params
 	{
 		title = "Blufor Faction";
 		values[] = {0};
-		texts[] = {};
+		texts[] = {"USA"};
 		default = 0;
 	};
 	
@@ -28,7 +28,42 @@ class Params
 	{
 		title = "Opfor Faction";
 		values[] = {0};
-		texts[] = {""};
+		texts[] = {"TERRORISTS"};
 		default = 0;
 	};
+	
+	class Preset
+    {
+        title = "Preset";
+        values[] = {0,1};
+        texts[] = {
+            "Custom",
+            "Debug Mode (all parameters below will be ignored)"
+        };
+        default = 1;
+    };
+	
+	 class DefenseTime
+    {
+        title = "Time to Defend the City (Minutes)";
+        values[] = {120,900,1200,1500,1800,2100,2400,2700,3000,3300,3600,3900,4200,4500,4800};
+        texts[] = {"2","15","20","25","30","35","40","45","50","55","60","65","70","75","80"};
+        default = 3600;
+    };
+
+    class CaptureTime
+    {
+        title = "Time in Control to Capture City (Minutes)";
+        values[] = {150,300,450,600,750,900};
+        texts[] = {"2:30", "05:00", "07:30", "10:00", "12:30", "15:00"};
+        default = 600;
+    };
+	
+	class ControlRatio
+    {
+        title = "Ratio to Control the City - Blufor:Opfor";
+        values[] = {1,1.5,1.75,2,2.5,3,3.5,4,4.5,5};
+        texts[] = {"1:1","1.5:1","1.75:1","2:1","2.5:1","3:1","3.5:1","4:1","4.5:1","5:1"};
+        default = 2;
+    };
 };
